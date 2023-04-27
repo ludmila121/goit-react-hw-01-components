@@ -1,36 +1,36 @@
 import PropTypes from 'prop-types';
-import css from './Profile.css';
+import s from './Profile.module.scss';
 
 
 
-export const UserCard = (props) => {
+ const UserCard = (props) => {
     const { userName, tag, location, avatar, stats } = props;
   
       return (
-        <div className={css.profile}>
-        <div className={css.description}>
+        <div className={s.profile}>
+        <div className={s.description}>
         <img
         src={avatar}
         alt="User avatar"
-        className={css.avatar}
+        className={s.avatar}
       />
-      <p className={css.name}>{userName}</p>
-      <p className={css.tag}>{tag}</p>
-      <p className={css.location}>{location}</p>
+      <p className={s.name}>{userName}</p>
+      <p className={s.tag}>{tag}</p>
+      <p className="location">{location}</p>
     </div>
   
-    <ul className={css.stats}>
-      <li className={css.stats.item}>
-        <span className={css.label}>Followers</span>
-        <span className={css.quantity}>{stats.followers}</span>
+    <ul className={s.stats}>
+      <li className={s.stats.item}>
+        <span className={s.label}>Followers</span>
+        <span className={s.quantity}>{stats.followers}</span>
       </li>
-      <li className={css.stats.item}>
-        <span className={css.label}>Views</span>
-        <span className={css.quantity}>{stats.views}</span>
+      <li className={s.stats.item}>
+        <span className={s.label}>Views</span>
+        <span className={s.quantity}>{stats.views}</span>
       </li>
-      <li className={css.stats.item}>
-        <span className={css.label}>Likes</span>
-        <span className={css.quantity}>{stats.likes}</span>
+      <li className={s.stats.item}>
+        <span className={s.label}>Likes</span>
+        <span className={s.quantity}>{stats.likes}</span>
       </li>
     </ul>
   </div>
@@ -41,9 +41,5 @@ export const UserCard = (props) => {
     tag: PropTypes.string,
     location: PropTypes.string,
     avatar: PropTypes.string,
-    stats: PropTypes.shape({
-      followers: PropTypes.number,
-      views: PropTypes.number,
-      likes: PropTypes.number,
-    }),
   };
+  export  default UserCard;

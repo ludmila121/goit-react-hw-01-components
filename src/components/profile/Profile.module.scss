@@ -34,32 +34,29 @@
     color: var(--ligth-text); 
 }
 .stats{
-    display: flex;
-    border-top: 1px solid var(--border-cl);
-  } 
-
-.item{
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+    padding: 0;
+   li{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    flex-basis: calc(100% / 3);
-    padding: 20px;
-    background-color: var(--bg-cl); 
-}
-.item:not(:last-child)::after{
-    content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 1px;
-  background-color: var(--border-cl);
-}
+    align-items: center;    
+    
+    padding: 10px;
+    height: 50px;
+    background-color: #ececec;
+    border: 2px solid #ccc;
+    }
+} 
+
 .label{
-    color: var(--ligth-text);
+    font-size: 14px;  
+  line-height: 1.75;
+  color: #7c7c7c;
 }
 .quantity{
-    font-weight: 700;  
+    font-size: 18px;
+  font-weight: 700;
+  line-height: 1.75;
 }
