@@ -1,6 +1,6 @@
-import data from "../data/data.json";
+import data from "data/data.json";
 import StatisticsCard from "./StatisticsCard";
-import s from '..Statistics.module.scss'
+import s from './Statistics.module.scss'
 
 const Statistics = ({title}) => {
    return (
@@ -9,7 +9,7 @@ const Statistics = ({title}) => {
         <ul className={s.statList}>
         {data.map((el) => {
             return (
-                <StatisticsCard 
+                <StatisticsCard
                 key={el.id}
                 label={el.label}
                 percentage={el.percentage}

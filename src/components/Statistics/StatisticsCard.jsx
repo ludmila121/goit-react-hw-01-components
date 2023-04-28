@@ -1,5 +1,5 @@
 import ProtoTypes from "prop-types";
-import s from '../Statistics/Statistics.module.scss';
+import s from './Statistics.module.scss';
 
 const StatisticsCard =(props) => {
     const { label, percentage} = props;

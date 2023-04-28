@@ -1,5 +1,5 @@
 import FriendCard from "../FriendCard/FriendCard";
-import friends from '../data/friends.json';
+import friends from 'data/friends.json';
 import s from '../FriendList/FriendList.scss';
 
 const FriendList = () => {
