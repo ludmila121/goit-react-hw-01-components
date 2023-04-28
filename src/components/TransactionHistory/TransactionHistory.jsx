@@ -1,4 +1,4 @@
-import transactions from './transactions.json';
+import transactions from '../data/transaction.json';
 import TransitionHistoryItem from './TransactionHistoryItem';
 import s from './TransactionHistory.module.scss'
 

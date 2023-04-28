@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import  s from './FriendList.scss';
-import {StatusStyled} from './FriendList.styled.js';
+import  s from '../FriendList/FriendList.scss';
+import {StatusStyled} from '../FriendList/FriendList.styled.js';
 
 const FriendCard = (props) => {
 const {statusInOnline, avatar, userName} = props;

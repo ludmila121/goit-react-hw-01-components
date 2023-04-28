@@ -1,4 +1,4 @@
-import user from './user.json';
+import user from '../data/user.json';
 import UserCard from  './UserProfile';
 
 const Profile = () => {

@@ -1,4 +1,4 @@
-import data from "./data.json";
+import data from "../data/data.json";
 import StatisticsCard from "./StatisticsCard";
 import s from '..Statistics.module.scss'
 

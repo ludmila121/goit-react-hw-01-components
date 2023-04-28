@@ -1,6 +1,6 @@
-import FriendCard from "./FriendCart";
-import friends from "./friends.json";
-import s from './FriendList.scss';
+import FriendCard from "../FriendCard/FriendCard";
+import friends from '../data/friends.json';
+import s from '../FriendList/FriendList.scss';
 
 const FriendList = () => {
     return (
