@@ -4,7 +4,7 @@ import s from './Profile.module.scss';
 
 
 const UserCard = (props) => {
-    const { name, tag, location, avatar, stats } = props;
+    const { userName, tag, location, avatar, stats } = props;
   
       return (
         <div className={s.profile}>
@@ -14,8 +14,8 @@ const UserCard = (props) => {
         alt="User avatar"
         className={s.avatar}
       />
-      <p className={s.name}>{name}</p>
-      <p className={s.tag}>{tag}</p>
+      <p className={s.name}>{userName}</p>
+      <p className={s.tag}>@{tag}</p>
       <p className="location">{location}</p>
     </div>
   
