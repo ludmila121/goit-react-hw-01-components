@@ -1,6 +1,6 @@
 import FriendCard from "../FriendCard/FriendCard";
 import friends from 'data/friends.json';
-import s from '../FriendList/FriendList.scss';
+import s from '../FriendCard/FriendCard.module.scss';
 
 const FriendList = () => {
     return (
@@ -10,7 +10,7 @@ const FriendList = () => {
                 key={el.id}
                 statusIsOnline={el.isOnline}
                 avatar={el.avatar}
-                name={el.name}
+                name={el.userName}
                 />
             );
         })}
