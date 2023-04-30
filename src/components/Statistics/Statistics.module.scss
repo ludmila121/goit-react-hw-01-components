@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12),
-    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 5px 5px 0px rgba(58, 178, 54, 0.907),
+    0px 1px 2px 3px rgba(213, 212, 211, 0.923), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
   }
   
   .statList {
@@ -22,7 +22,7 @@
         justify-content: center;
         height: 50px;
         padding: 10px 0 10px;
-        background-color: tomato;
+        background-color: rgb(117, 8, 85);
         border: 1px solid #ccc ;
         color: #fff;
     }
@@ -32,7 +32,7 @@
       padding: 15px;
       text-transform: uppercase;
       font-size: 24px;
-      color: #7c7c7c;
+      color: #0b0a0a;
   }
   
   .label{

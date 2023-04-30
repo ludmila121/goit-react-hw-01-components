@@ -9,10 +9,12 @@ export const App = () => {
    return (
   <ContainerStyled>
     <UserProfile />
-    <Statistics />
-    <FriendList />
+    <Statistics  title= "Upload stats"/>
+    <FriendList  />
     <TransactionHistory />
     </ContainerStyled>
+
+  
   ); 
 }
 export default App;

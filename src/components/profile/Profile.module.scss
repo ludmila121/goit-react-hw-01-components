@@ -19,8 +19,9 @@
     padding: 40px; 
 }
 .avatar{
-    width: 70px;
-  height: 70px;
+    width: 200px;
+  //height: 150px;
+  background-color: #0be5ab;
   margin-bottom: 15px;
   border-radius: 50%;
 }
@@ -53,7 +54,7 @@
 .label{
     font-size: 14px;  
   line-height: 1.75;
-  color: #7c7c7c;
+  color: #0a0909;
 }
 .quantity{
     font-size: 18px;
