@@ -15,9 +15,5 @@ return (
 );
 };
 
-FriendCard.propTypes = {
-    statusInOnline: PropTypes.bool,
-    avatar: PropTypes.string,
-    name: PropTypes.string,
-};
+
 export default FriendCard;
