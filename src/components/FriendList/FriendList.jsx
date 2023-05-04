@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import s from '../FriendCard/FriendCard.module.scss';
-import friends from '../data/friends.json';
 
 export  const FriendList = ({friends= [] }) => {
     const FriendCard = (friends.map(el => {
