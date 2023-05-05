@@ -1,11 +1,8 @@
 import s from './TransactionHistory.module.scss'
 import PropTypes from 'prop-types';
-import transactions from '../data/transaction.json';
 
 
-const TransactionHistory = ({items =[]}) => {
-   const stats = items.map(el => {
-    const { id, type, amount, currency } = el;
+const TransactionHistory = ({items}) => {
     return (
       <table className={s.transactionHistory}>
         <thead>
@@ -15,21 +12,22 @@ const TransactionHistory = ({items =[]}) => {
             <th>Currency</th>
           </tr>
         </thead>
+        
         <tbody>
-          return (
-              <thead>
-                <tr key = {id}>
-                  <th>{type}</th> 
-                  <th>{amount}</th> 
-                  <th>{currency}</th> 
-              </tr>
-             </thead>
-            );
-        </tbody>
+          {items.map((transactions) => { 
+            return( 
+                <tr> 
+                  <td>{transactions.type}</td> 
+                  <td>{transactions.amount}</td> 
+                  <td>{transactions.currency}</td> 
+                </tr>
+               );
+             })}
+            </tbody>
       </table>
-  );
-  });
-};
+);
+}
+
     
    TransactionHistory.propTypes = {
     item: PropTypes.arrayOf(
