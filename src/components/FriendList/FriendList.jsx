@@ -1,28 +1,29 @@
 import PropTypes from 'prop-types';
 import s from '../FriendCard/FriendCard.module.scss';
+import FriendCard from '../FriendCard/FriendCard';
 
-export  const FriendList = ({friends= [] }) => {
-     const FriendCard = (friends.map(el => {
-        const {id, avatar, name, isOnline} = el;
+
+export  const FriendList = ({friends}) => {
        return (
-        <li className={s.item} key={id} id= {id}>
-        <span className={isOnline ? s.online : s.offline}></span>
-        <img className = {avatar} 
-        src={avatar} alt="User avatar" width ="48"></img>
-        <p className={s.name}>{name}</p>
-    </li>
-);
-}))
-return <ul className={s.FriendCard}>{FriendCard}</ul>;
-};
+        <ul className={s.friendList}>
+          {friends.map((el) => {
+           return (
+             <FriendCard
+               key={el.id}
+               statusIsOnline={el.isOnline}
+               avatar={el.avatar}
+               name={el.name}
+             />
+        );
+      })}
+    </ul>
+       );
+    };
 FriendList.protoTypes ={
     friends: PropTypes.arrayOf(
         PropTypes.shape({
             id:PropTypes.number.isRequired,
-            statusInOnline: PropTypes.bool.isRequired,
-            avatar: PropTypes.string.isRequired,
-            name: PropTypes.string.isRequired
-        }).isRequired
+        })
         ),
     };
     export default FriendList;

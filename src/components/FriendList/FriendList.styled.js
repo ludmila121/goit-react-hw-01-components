@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StatusStyled = styled.span`
+ export  const StatusStyled = styled.span`
   width: 5px;
   height: 5px;
   border-radius:50%;
