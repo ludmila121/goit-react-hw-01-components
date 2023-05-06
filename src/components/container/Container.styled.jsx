@@ -1,5 +1,5 @@
 
-import container from './container.module.scss';
+import s from './container.module.scss';
 import PropTypes from 'prop-types';
 
 export const ContainerStyled = ({ title, children }) => {
@@ -11,7 +11,7 @@ export const ContainerStyled = ({ title, children }) => {
     );
   };
   
-  Container.protoType = {
+  ContainerStyled.protoType = {
     title: PropTypes.string.isRequired,
   };
 

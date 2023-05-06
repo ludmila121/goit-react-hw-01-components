@@ -1,28 +1,33 @@
-import data from '../data/data.json';
+
 import PropTypes from 'prop-types';
 import s from '../Statistics/Statistics.module.scss';
-import StatisticsCard from './StatisticsCard';
 
 
+export default function Statistics({ title, stats }) {
+  return (
+    <section className={s.statistics}>
+      {title && <h2 className={s.title}>{title}</h2>}
 
-const Statistics = ({title}) => {
-    return (
-      <section className={s.statistics}>
-        {title && <h2 className={s.title}>{title}</h2>}
-        <ul className={s.statList}>
-          {data.map((el) => {
-            return (
-              <StatisticsCard
-                key={el.id}
-                label={el.label}
-                percentage={el.percentage}
-              />
-            );
-          })}
-        </ul>      
-      </section>
-    );
-  };
+      <ul className={s.statList}>
+        {stats.map(({ id, label, percentage }) => (
+          <li
+            className={s.item}
+            key={id}
+            style={{
+              backgroundColor: getRandomHexColor(),
+            }}
+          >
+            <span className={s.label}>{label}</span>
+            <span className="percentage">{percentage}%</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
 
 Statistics.protoTypes = {
     title: PropTypes.string,
@@ -34,4 +39,3 @@ Statistics.protoTypes = {
         })
     )
 }
-export default Statistics;

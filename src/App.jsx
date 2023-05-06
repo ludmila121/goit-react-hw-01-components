@@ -1,5 +1,5 @@
 import './App.css';
-
+import {ContainerStyled} from './components/container/Container.styled'
 import Profile from './components/profile/UserProfile';
 import user from './components/data/user.json';
 
@@ -14,7 +14,7 @@ import transaction from './components/data/transaction.json'
 
 export const App = () => {
    return (
-<div className="App">
+<ContainerStyled>
      <Profile 
      key= {user.id}
      userName={user.username}
@@ -26,7 +26,7 @@ export const App = () => {
     <Statistics  title= "Upload stats" Statistics={data}/>
     <FriendList title= "FriendList" friends={friends} />
     <TransactionHistory title="TransactionHistory" items={transaction} />
-</div>
+</ContainerStyled>
   
 ); 
 };

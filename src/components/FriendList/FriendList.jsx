@@ -3,7 +3,7 @@ import s from '../FriendCard/FriendCard.module.scss';
 import FriendCard from '../FriendCard/FriendCard';
 
 
-export  const FriendList = ({friends}) => {
+ const FriendList = ({friends}) => {
        return (
         <ul className={s.friendList}>
           {friends.map((el) => {
