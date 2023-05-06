@@ -7,13 +7,11 @@
     margin: 0 auto;
     box-shadow:   inset 0 -3em 3em rgba(0,0,0,0.1),
     0 0  0 2px rgb(255,255,255),
-    0.3em 0.3em 1em rgba(0,0,0,0.3);
+    0.3em 0.3em 5em rgba(6, 88, 59, 0.716);
     
     
     thead {
       background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
-
-     
       border-collapse: collapse;
       border: 2px solid #ccc;
       background-color: turquoise;
@@ -29,13 +27,17 @@
       width: 200px;
       text-align: center;
       padding: 10px;
+    
     }
     tr {
         
       display: block;
       border: 1px solid #ccc;
       width: 600px;    
-     
+      border: 1px solid black;
+    }
+    tr:hover {
+      background-color: rgba(170, 0, 255, 0.637);
     }
   }
   tbody tr:nth-child(odd) {
